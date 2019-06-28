@@ -7,15 +7,19 @@ import Result from './containers/Result'
 import logo from './LogoPtKamenoKo.PNG';
 import { connect } from 'react-redux';
 import './App.scss';
+import Biblio from './containers/Biblio';
 
 function App({route}) {
   return (
     <div className="App">
+        <div>
       <img src={logo} className="App-logo" alt="logo" />
+        </div>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path={'/result'} component={Result} />
         <Route exact path={route} component={Questions} />
+        <Route path='/biblio' component={Biblio} />
         <Route path={route + '/solution'} component={Solution} />
       </Switch>
     </div>
