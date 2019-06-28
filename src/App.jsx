@@ -5,6 +5,7 @@ import Questions from './containers/Questions';
 import logo from './LogoPtKamenoKo.PNG';
 import { connect } from 'react-redux';
 import './App.scss';
+import Biblio from './containers/Biblio';
 
 function App({route}) {
   return (
@@ -15,6 +16,7 @@ function App({route}) {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path='/questions/4' component={Questions} />
+        <Route path='/biblio' component={Biblio} />
       </Switch>
     </div>
   );
