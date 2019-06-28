@@ -6,7 +6,7 @@ import { router } from '../actions/router'
 
 
 function Solution ({question, router, route, count, countAction}) {
-  const newRoute = route.slice(0, 11) + (parseInt(route.substring(11)) + 1)
+  let newRoute = route.slice(0, 11) + (parseInt(route.substring(11)) + 1)
   if (parseInt(route.substring(11)) === 4) {
     newRoute = 'resulta'
   }

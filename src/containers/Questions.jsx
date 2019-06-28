@@ -35,15 +35,19 @@ class Questions extends Component {
           {loading ? '' :question.Reponse.map(reponse => 
           <div 
           key={reponse.id} 
-          onClick={() => this.incrementCarbone(reponse.co2Impact)} 
+          onClick={() => this.incrementCarbone(reponse.co2Impact)}
           className={carbone === reponse.co2Impact? 'coche' : ''}
           >
           {reponse.name}
           </div>
           )}
         </div>
-        
-      <Link to={newRoute} onClick={() => counter(parseInt(carbone))}><button type="button" >Valider</button></Link>
+      <Link 
+      to={newRoute} 
+      onClick={() => counter(parseInt(carbone))}
+      >
+        <button type="button">Valider</button>
+      </Link>
       </div>
     );
   }
