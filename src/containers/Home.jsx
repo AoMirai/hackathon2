@@ -4,10 +4,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { router } from '../actions/router'
 
-function Home({route}) {
+function Home({route, router}) {
   return (
     <div className="Home">
-      {route}
       <div className="intro">
         "Internet, c'est plus écologique que le papier ou les CD", 
         c'est effectivement ce qu'on a l'habitude de penser, et logiquement, 
@@ -15,7 +14,7 @@ function Home({route}) {
         Connaissez vous réelement l'impact écologique de vos actions sur internet ? 
         Testez votre consommation de CO2 journalier via un Quizz !
       </div>
-      <Link to="/questions/4" onClick={() => router('/questions/4')}><button type="button" >Commencer</button></Link>
+      <Link to="/questions/1" onClick={() => router('/questions/1')}><button type="button" >Commencer</button></Link>
     </div>
   );
 }

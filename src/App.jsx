@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './containers/Home';
 import Questions from './containers/Questions';
+import Solution from './containers/Solution'
 import logo from './LogoPtKamenoKo.PNG';
 import { connect } from 'react-redux';
 import './App.scss';
@@ -12,7 +13,8 @@ function App({route}) {
       <img src={logo} className="App-logo" alt="logo" />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path='/questions/4' component={Questions} />
+        <Route exact path={route} component={Questions} />
+        <Route path={route + '/solution'} component={Solution} />
       </Switch>
     </div>
   );
