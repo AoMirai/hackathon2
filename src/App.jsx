@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './containers/Home';
 import Questions from './containers/Questions';
 import Solution from './containers/Solution'
+import Result from './containers/Result'
 import logo from './LogoPtKamenoKo.PNG';
 import { connect } from 'react-redux';
 import './App.scss';
@@ -13,6 +14,7 @@ function App({route}) {
       <img src={logo} className="App-logo" alt="logo" />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path={'/result'} component={Result} />
         <Route exact path={route} component={Questions} />
         <Route path={route + '/solution'} component={Solution} />
       </Switch>

@@ -9,11 +9,16 @@ export class Result extends Component {
 
   render() {
     const { count } = this.props
+    let equiv = count / 1.5
+    
     return (
       <div className="Result">
         {`Ajourd'hui, en parcourant le web, vous avez produit un impact carbone de ${count}g`}
-        {`Cela équivaut à`}
-        {}
+        {`Cela équivaut à ${equiv}mL de bière.`}
+        <div>
+          Alors, bière avec les amis ou geekage sur internet ?
+        </div>
+        
       </div>
     )
   }

@@ -8,7 +8,7 @@ import { router } from '../actions/router'
 function Solution ({question, router, route, count, countAction}) {
   let newRoute = route.slice(0, 11) + (parseInt(route.substring(11)) + 1)
   if (parseInt(route.substring(11)) === 4) {
-    newRoute = 'resulta'
+    newRoute = '/result'
   }
   return (
     <div className="Solution">
