@@ -9,7 +9,9 @@ import './App.scss';
 function App({route}) {
   return (
     <div className="App">
+        <div>
       <img src={logo} className="App-logo" alt="logo" />
+        </div>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path='/questions/4' component={Questions} />

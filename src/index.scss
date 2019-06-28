@@ -5,9 +5,40 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #7CE0A7;
+  width: 100%;
+  color: #006083;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.laptop {
+  height: 200px;
+  width: 100%;
+}
+
+.intro {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.bouton {
+  background-color: #006083;
+  border: 1px solid #006083;
+  margin: 20px;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.signature {
+  color: #006083;
+  font-size: 12px;
 }
