@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #7CE0A7;
@@ -13,9 +13,8 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
-<<<<<<< HEAD
 
 .laptop {
   height: 200px;
@@ -46,8 +45,16 @@ code {
 
 a {
   color: darkslategrey;
-=======
-.coche {
-  background-color: green;
->>>>>>> 3efcf4a70c137b52e059ccbbdd0815265d636b7f
 }
+
+.coche {
+  background-color: #006083;
+  color: #FFFFFF;
+  padding: 5px;
+}
+
+.consigne {
+  padding: 10px;
+  font-weight: bold;
+}
+

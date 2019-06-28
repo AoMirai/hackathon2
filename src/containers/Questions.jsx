@@ -15,7 +15,7 @@ class Questions extends Component {
     const { route, asyncFetchQuestions } = this.props
     asyncFetchQuestions(route)
   }
-  
+
   incrementCarbone = (carbone) => {
     this.setState({carbone: parseInt(carbone)})
   }
@@ -31,20 +31,25 @@ class Questions extends Component {
         </div>
         {error !== '' ? <div>{error}</div> : ''}
         <div className="question">
-          {loading ? <div>Chargement en cours...</div> : question.directive}
-          {loading ? '' :question.Reponse.map(reponse => 
-          <div 
-          key={reponse.id} 
-          onClick={() => this.incrementCarbone(reponse.co2Impact)} 
-          className={carbone === reponse.co2Impact? 'coche' : ''}
+          <div className="consigne">
+            {loading ? <div>Chargement en cours...</div> : question.directive}
+          </div>
+        </div>
+          <div className="consigne">
+            {'Sélectionner la bonne réponse :'}
+          </div>
+         {loading ? '' : question.Reponse.map(reponse =>
+          <div
+          key={reponse.id}
+          onClick={() => this.incrementCarbone(reponse.co2Impact)}
+          className={carbone === reponse.co2Impact? "coche" : ''}
           >
-          {reponse.name}
+            {reponse.name}
           </div>
           )}
-        </div>
-        
-      <Link to={newRoute} onClick={() => counter(parseInt(carbone))}><button type="button" >Valider</button></Link>
-      </div>
+
+      <Link to={newRoute} onClick={() => counter(parseInt(carbone))}><button type="button" className="bouton" >Valider</button></Link>
+
     );
   }
 }
@@ -53,7 +58,7 @@ const mstp = state => ({
   loading: state.questions.loading,
   error: state.questions.error,
   question: state.questions.question,
-  route: state.router.route, 
+  route: state.router.route,
   count: state.counter.count
 })
 

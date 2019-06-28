@@ -12,12 +12,14 @@ function Home({route, router}) {
         "Internet, c'est plus écologique que le papier ou les CD",
         c'est effectivement ce qu'on a l'habitude de penser, et logiquement, 
         ça pourrait être vrai, mais ce n'est pas forcément le cas.
-          <strong>Connaissez vous réelement l'impact écologique de vos actions sur internet ? </strong>
+          <div>
+              <strong>Connaissez vous réelement l'impact écologique de vos actions sur internet ? </strong>
+          </div>
         Testez votre consommation de CO2 journalier via un Quizz !
       </div>
         <img src={ home } className="laptop" alt='laptop'/>
         <div>
-        <Link to="/questions/4" onClick={() => router('/questions/4')}><button type="button" className="bouton" >Commencer</button></Link>
+        <Link to="/questions/1" onClick={() => router('/questions/1')}><button type="button" className="bouton" >Commencer</button></Link>
         </div>
       <div className="signature">
         © Kame no Do
