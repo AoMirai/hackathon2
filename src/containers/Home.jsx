@@ -15,7 +15,6 @@ function Home({route, router}) {
           <strong>Connaissez vous réelement l'impact écologique de vos actions sur internet ? </strong>
         Testez votre consommation de CO2 journalier via un Quizz !
       </div>
-<<<<<<< HEAD
         <img src={ home } className="laptop" alt='laptop'/>
         <div>
         <Link to="/questions/4" onClick={() => router('/questions/4')}><button type="button" className="bouton" >Commencer</button></Link>
@@ -23,9 +22,6 @@ function Home({route, router}) {
       <div className="signature">
         © Kame no Do
       </div>
-=======
-      <Link to="/questions/1" onClick={() => router('/questions/1')}><button type="button" >Commencer</button></Link>
->>>>>>> 3efcf4a70c137b52e059ccbbdd0815265d636b7f
     </div>
   );
 }
