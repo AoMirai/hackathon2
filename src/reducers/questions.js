@@ -1,4 +1,6 @@
 const initialState = {
+  loading: false,
+  error: '',
   question: {
     "@context": "/api/contexts/Question",
     "@id": "/api/questions/1",
@@ -55,10 +57,9 @@ const questions = (state = initialState, action) => {
       };
     }
     case 'FETCH_SUCCESS_QUESTIONS': {
-      console.log('question action fetch')
       return {
         loading: false,
-        question: action.questions,
+        question: action.question,
         error: '',
       };
     }

@@ -1,10 +1,12 @@
 export const startFetchQuestions = () => ({
   type: 'START_FETCH_QUESTIONS',
 });
-export const fetchSuccessQuestions = (route) => ({
-  type: 'FETCH_SUCCESS_QUESTIONS',
-  route
-});
+export const fetchSuccessQuestions = (question) => {
+  console.log('fetch success')
+  return {type: 'FETCH_SUCCESS_QUESTIONS',
+  question}
+  
+};
 export const fetchErrorQuestions = err => ({
   type: 'FETCH_ERROR_QUESTIONS',
   err,
@@ -13,7 +15,7 @@ export const fetchErrorQuestions = err => ({
 export const asyncFetchQuestions = (route) => (dispatch) => {
   console.log('reducer fetch')
   dispatch(startFetchQuestions());
-  fetch(`http://192.168.1.38:8000/api/${route}`)
+  fetch(`http://192.168.1.38:8000/api${route}`)
     .then(res => res.json())
     .then((question) => {
       dispatch(fetchSuccessQuestions(question));
